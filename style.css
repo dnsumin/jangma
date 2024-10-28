@@ -1,0 +1,121 @@
+/* 전체 페이지 배경색 */
+body {
+    margin: 0; /* 기본 여백 제거 */
+    background-color: black; /* 전체 배경을 검정색으로 설정 */
+    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    font-family: 'Pretendard-Regular', sans-serif; /* 폰트 적용 */
+    user-select: none; /* 드래그 선택 방지 */
+    -webkit-user-drag: none; /* 드래그 효과 방지 (웹킷 기반 브라우저) */
+}
+
+.jangma-title {
+    margin-left: 6vw;
+}
+/* 헤더 스타일 */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* 뷰포트 높이의 15%로 설정 (기존보다 크게) */
+    width: 100%; /* 뷰포트 너비 전체 */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%; /* 전체 너비의 90%로 설정 */
+    padding: 10px 0; /* 상하 여백 추가 */
+}
+
+.text1, .text2 {
+    margin: 0 37vw;
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-size: 1vw; /* 뷰포트 너비 기준 텍스트 크기 */
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    width: 4.5vw; /* 로고 너비를 뷰포트 너비의 4%로 설정 (기존보다 작게) */
+    height: auto; /* 높이를 비율에 맞게 조정 */
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: nowrap; /* 이미지가 한 줄로 표시되도록 설정 */
+    position: relative;
+    width: 100%; /* 캘린더의 너비 */
+    max-width: 800px; /* 캘린더의 최대 너비 */
+    height: auto; /* 높이 자동 조정 */
+    left: 40%; /* 왼쪽 50% 위치에 배치 */
+    transform: scale(1.8);}
+
+.image {
+    position: absolute; /* 절대 위치 설정 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    transform: scale(0.7); /* 이미지 크기를 90%로 줄임 */
+}
+
+/* 이미지 위치 설정 (필요에 따라 수정) */
+.image1 { top: -10px; left: -280px; }
+.image2 { top: -10px; left: -130px; }
+.image3 { top: -10px; left: 39px; }
+.image4 { top: -10px; left: 286px; }
+.image5 { top: -35px; left: 401px; }
+.image6 { top: -10px; left: 500px; }
+.image7 { top: -10px; left: 758px; }
+.image8 { top: 135px; left: -298px; }
+.image9 { top: 135px; left: -48px; }
+.image10 { top: 135px; left: 128px; }
+.image11 { top: 160px; left: 286px; }
+.image12 { top: 270px; left: 258px; }
+.image13 { top: 127px; left: 528px; }
+.image14 { top: 127px; left: 645px; }
+.image15 { top: 127px; left: 759px; }
+.image16 { top: 385px; left: -298px; }
+.image17 { top: 385px; left: -35px; }
+.image18 { top: 385px; left: 60px; }
+.image19 { top: 385px; left: 203px; }
+.image20 { top: 385px; left: 417px; }
+.image21 { top: 385px; left: 464px; }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* 초기에는 숨김 */
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-text {
+    position: absolute; /* 절대 위치 설정 */
+    top : 400px;
+    color: rgb(0, 0, 0); /* 텍스트 색상 */
+    font-size: 2rem; /* 텍스트 크기 조정 */
+    z-index: 10; /* 이미지보다 위에 위치하도록 설정 */
+    text-align: center;
+}
+
+
+.letter {
+    display: none; /* 초기에는 숨김 */
+    max-width: 80%; /* 너비 제한 */
+    max-height: 80%; /* 높이 제한 */
+}
+
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}

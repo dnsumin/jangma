@@ -6,7 +6,6 @@ body {
     font-family: 'Pretendard-Regular', sans-serif; /* 폰트 적용 */
     user-select: none; /* 드래그 선택 방지 */
     -webkit-user-drag: none; /* 드래그 효과 방지 (웹킷 기반 브라우저) */
-    text-decoration: none; /* 밑줄 제거 */
 }
 
 .jangma-title {

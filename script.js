@@ -7,14 +7,9 @@ images.forEach(image => {
     image.dataset.originalSrc = image.src;
 
     image.addEventListener('click', function() {
-        // 현재 이미지의 src를 새로운 이미지로 변경합니다.
-        const openImage = this.getAttribute('data-open');
-        this.src = openImage;
-    
-        // 이미지의 너비와 높이를 가져와서 중앙을 기준으로 위치를 계산합니다.
-        const imageRect = this.getBoundingClientRect();
-        const newLeft = imageRect.left + (imageRect.width / 2) - 1; // 2px 왼쪽으로 이동
-    
+        // 이미지 불투명도 줄이기
+        this.style.opacity = 0.5; // 불투명도 0.5로 설정
+
         // 0.5초 후에 어두운 배경과 텍스트를 나타냅니다.
         setTimeout(() => {
             const overlay = document.getElementById('overlay');
@@ -97,8 +92,9 @@ function closeOverlay() {
     const letterText = document.querySelector('.letter-text');
     letterText.style.display = 'none'; // 텍스트 숨기기
 
-    // 모든 이미지를 원래 이미지로 되돌리기
+    // 모든 이미지를 원래 이미지로 되돌리기 및 불투명도 원래대로 설정
     images.forEach(image => {
         image.src = image.dataset.originalSrc; // 원래 이미지로 변경
+        image.style.opacity = 1; // 불투명도를 원래대로 되돌림
     });
 }

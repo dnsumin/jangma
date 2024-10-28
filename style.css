@@ -34,6 +34,7 @@ header {
     font-size: 1vw; /* 뷰포트 너비 기준 텍스트 크기 */
     text-align: center;
     color: white;
+    text-decoration: none; /* 밑줄 제거 */
 }
 
 .logo {
